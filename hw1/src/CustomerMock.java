@@ -7,7 +7,7 @@ public class CustomerMock {
     Seller seller;
 
     public CustomerMock() {
-        money = 20;
+        money = 10;
     }
 
     public CustomerMock(int money) {

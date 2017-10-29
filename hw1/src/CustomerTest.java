@@ -16,18 +16,56 @@ public class CustomerTest {
 
     @Before
     public void setUp() throws Exception {
-        System.out.println("setUp");
         customer = new CustomerMock();
         customer.enterShop(new Seller());
     }
 
     @After
     public void tearDown() throws Exception {
-        System.out.println("tearDown");
     }
 
     @Test
-    public void buy() throws Exception {
+    public void buy1() throws Exception {
         assertEquals("购买成功", customer.buy(1,1,1));
+    }
+
+    @Test
+    public void buy2() throws Exception {
+        assertEquals("没钱", customer.buy(2,2,2));
+    }
+
+    @Test
+    public void buy3() throws Exception {
+        assertEquals("参数错误", customer.buy(-1,1,1));
+    }
+
+    @Test
+    public void buy4() throws Exception {
+        assertEquals("参数错误", customer.buy(1,-1,1));
+    }
+
+    @Test
+    public void buy5() throws Exception {
+        assertEquals("参数错误", customer.buy(1,1,-1));
+    }
+
+    @Test
+    public void buy6() throws Exception {
+        assertEquals("参数错误", customer.buy(-1,-1,1));
+    }
+
+    @Test
+    public void buy7() throws Exception {
+        assertEquals("参数错误", customer.buy(-1,1,-1));
+    }
+
+    @Test
+    public void buy8() throws Exception {
+        assertEquals("参数错误", customer.buy(1,-1,-1));
+    }
+
+    @Test
+    public void buy9() throws Exception {
+        assertEquals("参数错误", customer.buy(-1,-1,-1));
     }
 }
