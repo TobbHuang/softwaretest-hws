@@ -46,22 +46,4 @@ public class Seller {
             return "库存不足";
         }
     }
-
-
-    /**
-     * seller.queryPrice 桩函数
-     * @return
-     */
-    public int[] queryPrice_stub() {
-        int[] prices = {1, 2, 3};
-        return prices;
-    }
-
-    /**
-     * seller.sell 桩函数
-     * @return
-     */
-    public String sell_stub(int a, int b, int c) {
-        return "购买成功";
-    }
 }
